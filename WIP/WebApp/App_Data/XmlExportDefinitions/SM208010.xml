@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE doc [
+  <!ENTITY NewUI SYSTEM "NewUI.xml">
+]>
+<relations version="2" relations-version="2" main-table="PivotTable" file-name="(ScreenID)-(Name)">
+  <link from="PivotField (ScreenID, PivotTableID)" to="PivotTable (ScreenID, PivotTableID)" />
+  <link from="PivotFieldPreferences (ScreenID, PivotTableID, PivotFieldID)" to="PivotField (ScreenID, PivotTableID, PivotFieldID)" />
+  <link from="SiteMap (Url)" to="PivotTable (ScreenID, PivotTableID)" type="WeakByUrl" linkname="toPivotTableByScreenAndPivotTableId" baseurl="~/Pivot/Pivot.aspx" paramnames="screenid,pivottableid" />
+
+  &NewUI;
+</relations>

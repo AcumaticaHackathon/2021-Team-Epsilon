@@ -1,0 +1,17 @@
+<Tables fill ="True">
+	<Exclude  table="UploadFile" />
+	<Exclude  table="UploadFileInScreen" />
+	<Exclude  table="UploadFileRevision" />
+	<Exclude  table="NoteDoc" />
+	<Exclude  table="SearchIndex" />
+	<Exclude  table="VisitedRecord" />
+	<Exclude  table="PMReportRowsMultiplier" />
+	<Exclude  table="DistributedCache" />
+	<Exclude  table="CacheVersion" />
+	<Exclude  table="DateInfo" />
+    <Exclude  table="BPEventHistory" />
+    <Exclude  table="BPProcessedEventSubscribers" />
+	<Exclude  table="DummyTable" />
+	<Exclude  table="MarketAdaptation" />
+	<Exclude  table="PRTaxSettingAdditionalInformation" />
+</Tables>

@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report Name="report1">
+  <ExcelColumns>
+    <item>8</item>
+    <item>15</item>
+    <item>10</item>
+    <item>12</item>
+    <item>12</item>
+    <item>18</item>
+    <item>30</item>
+    <item>23</item>
+    <item>22</item>
+    <item>19</item>
+  </ExcelColumns>
+  <ExcelMode>Manual</ExcelMode>
+  <Filters>
+    <FilterExp>
+      <DataField>CAAdj.OrigAdjTranType</DataField>
+      <Value>@TranType</Value>
+    </FilterExp>
+    <FilterExp>
+      <DataField>CAAdj.OrigAdjRefNbr</DataField>
+      <Value>@RefNbr</Value>
+    </FilterExp>
+  </Filters>
+  <GridSize>4px, 4px</GridSize>
+  <LayoutUnit>Pixel</LayoutUnit>
+  <PageSettings>
+    <Landscape>True</Landscape>
+    <Margins></Margins>
+  </PageSettings>
+  <Parameters>
+    <ReportParameter>
+      <ColumnSpan>2</ColumnSpan>
+      <Name>TranType</Name>
+      <Prompt>Tran. Type</Prompt>
+      <Required>True</Required>
+      <ViewName>=Report.GetFieldSchema('CAAdj.AdjTranType')</ViewName>
+    </ReportParameter>
+    <ReportParameter>
+      <ColumnSpan>2</ColumnSpan>
+      <Name>RefNbr</Name>
+      <Prompt>Reference Nbr. </Prompt>
+      <Required>True</Required>
+      <ViewName>=[CAAdj.AdjRefNbr]</ViewName>
+    </ReportParameter>
+  </Parameters>
+  <Relations>
+    <ReportRelation>
+      <ChildName>CASplit</ChildName>
+      <Links>
+        <RelationRow>
+          <ChildField>AdjRefNbr</ChildField>
+          <ParentField>AdjRefNbr</ParentField>
+        </RelationRow>
+        <RelationRow>
+          <ChildField>AdjTranType</ChildField>
+          <ParentField>AdjTranType</ParentField>
+        </RelationRow>
+      </Links>
+      <ParentName>CAAdj</ParentName>
+    </ReportRelation>
+  </Relations>
+  <SchemaUrl>http://localhost/AcumaticaBudget</SchemaUrl>
+  <StylesTemplate>TemplateReport.rpx</StylesTemplate>
+  <Tables>
+    <ReportTable Name="CAAdj">
+      <Fields>
+        <ReportField Name="AdjRefNbr"></ReportField>
+        <ReportField Name="AdjTranType"></ReportField>
+        <ReportField Name="Approved">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="BranchID"></ReportField>
+        <ReportField Name="BranchID_Branch_acctName"></ReportField>
+        <ReportField Name="BranchID_description"></ReportField>
+        <ReportField Name="BranchID_Segment1"></ReportField>
+        <ReportField Name="CashAccountID"></ReportField>
+        <ReportField Name="CashAccountID_CashAccount_descr"></ReportField>
+        <ReportField Name="CashAccountID_description"></ReportField>
+        <ReportField Name="CashAccountID_Segment1"></ReportField>
+        <ReportField Name="ClearDate">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="ClearDate_Day"></ReportField>
+        <ReportField Name="ClearDate_Hour"></ReportField>
+        <ReportField Name="ClearDate_Month"></ReportField>
+        <ReportField Name="ClearDate_Quarter"></ReportField>
+        <ReportField Name="Cleared">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="ControlAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CreatedByID"></ReportField>
+        <ReportField Name="CreatedByID_Creator_displayName"></ReportField>
+        <ReportField Name="CreatedByID_Creator_Username"></ReportField>
+        <ReportField Name="CreatedByID_description"></ReportField>
+        <ReportField Name="CreatedByScreenID"></ReportField>
+        <ReportField Name="CreatedDateTime">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="CreatedDateTime_Day"></ReportField>
+        <ReportField Name="CreatedDateTime_Hour"></ReportField>
+        <ReportField Name="CreatedDateTime_Month"></ReportField>
+        <ReportField Name="CreatedDateTime_Quarter"></ReportField>
+        <ReportField Name="CuryControlAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryID"></ReportField>
+        <ReportField Name="CuryInfoID">
+          <DataType>Int64</DataType>
+        </ReportField>
+        <ReportField Name="CuryOrigDocAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryRate">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CurySplitTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTaxAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTaxRoundDiff">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTaxTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTranAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryVatExemptTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryVatTaxableTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryViewState">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="DocDate">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="DocDesc"></ReportField>
+        <ReportField Name="DocType"></ReportField>
+        <ReportField Name="Draft">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="DrCr"></ReportField>
+        <ReportField Name="EmployeeID"></ReportField>
+        <ReportField Name="EmployeeID_CREmployee_acctName"></ReportField>
+        <ReportField Name="EmployeeID_description"></ReportField>
+        <ReportField Name="EmployeeID_Segment1"></ReportField>
+        <ReportField Name="EntryTypeID"></ReportField>
+        <ReportField Name="EntryTypeID_CAEntryType_descr"></ReportField>
+        <ReportField Name="EntryTypeID_description"></ReportField>
+        <ReportField Name="ExtRefNbr"></ReportField>
+        <ReportField Name="FinPeriodID"></ReportField>
+        <ReportField Name="HasUseTax">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="HasWithHoldTax">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="Hold">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="IsTaxPosted">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="IsTaxSaved">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="IsTaxValid">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="LastModifiedByID"></ReportField>
+        <ReportField Name="LastModifiedByID_description"></ReportField>
+        <ReportField Name="LastModifiedByID_Modifier_displayName"></ReportField>
+        <ReportField Name="LastModifiedByID_Modifier_Username"></ReportField>
+        <ReportField Name="LastModifiedByScreenID"></ReportField>
+        <ReportField Name="LastModifiedDateTime">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="LastModifiedDateTime_Day"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Hour"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Month"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Quarter"></ReportField>
+        <ReportField Name="LineCntr">
+          <DataType>Int32</DataType>
+        </ReportField>
+        <ReportField Name="NonTaxable">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="NoteActivity"></ReportField>
+        <ReportField Name="NoteFiles"></ReportField>
+        <ReportField Name="NoteID">
+          <DataType>Object</DataType>
+        </ReportField>
+        <ReportField Name="NoteImages"></ReportField>
+        <ReportField Name="NoteText"></ReportField>
+        <ReportField Name="OrigAdjRefNbr"></ReportField>
+        <ReportField Name="OrigAdjTranType"></ReportField>
+        <ReportField Name="OrigDocAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="OrigModule"></ReportField>
+        <ReportField Name="OwnerID">
+          <DataType>Int32</DataType>
+        </ReportField>
+        <ReportField Name="OwnerID_description"></ReportField>
+        <ReportField Name="OwnerID_Owner_displayName"></ReportField>
+        <ReportField Name="PaymentsReclassification">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="RefNbr"></ReportField>
+        <ReportField Name="Rejected">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="Released">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="ReverseCount">
+          <DataType>Int32</DataType>
+        </ReportField>
+        <ReportField Name="Selected">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="SplitTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="Status"></ReportField>
+        <ReportField Name="TaxAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TaxCalcMode"></ReportField>
+        <ReportField Name="TaxRoundDiff">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TaxTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TaxZoneID"></ReportField>
+        <ReportField Name="TaxZoneID_description"></ReportField>
+        <ReportField Name="TaxZoneID_TaxZone_descr"></ReportField>
+        <ReportField Name="TranAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TranDate">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="TranDate_Day"></ReportField>
+        <ReportField Name="TranDate_Hour"></ReportField>
+        <ReportField Name="TranDate_Month"></ReportField>
+        <ReportField Name="TranDate_Quarter"></ReportField>
+        <ReportField Name="TranDesc"></ReportField>
+        <ReportField Name="TranID">
+          <DataType>Int64</DataType>
+        </ReportField>
+        <ReportField Name="TranID_CATran_batchNbr"></ReportField>
+        <ReportField Name="TranID_description"></ReportField>
+        <ReportField Name="TranPeriodID"></ReportField>
+        <ReportField Name="TransferNbr"></ReportField>
+        <ReportField Name="tstamp"></ReportField>
+        <ReportField Name="UsesManualVAT">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="VatExemptTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="VatTaxableTotal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="WorkgroupID"></ReportField>
+      </Fields>
+      <FullName>PX.Objects.CA.CAAdj</FullName>
+    </ReportTable>
+    <ReportTable Name="CASplit">
+      <Fields>
+        <ReportField Name="AccountID"></ReportField>
+        <ReportField Name="AccountID_Account_description"></ReportField>
+        <ReportField Name="AccountID_description"></ReportField>
+        <ReportField Name="AccountID_Segment1"></ReportField>
+        <ReportField Name="AdjRefNbr"></ReportField>
+        <ReportField Name="AdjTranType"></ReportField>
+        <ReportField Name="BranchID"></ReportField>
+        <ReportField Name="BranchID_Branch_acctName"></ReportField>
+        <ReportField Name="BranchID_description"></ReportField>
+        <ReportField Name="BranchID_Segment1"></ReportField>
+        <ReportField Name="CashAccountID"></ReportField>
+        <ReportField Name="CashAccountID_CashAccount_descr"></ReportField>
+        <ReportField Name="CashAccountID_description"></ReportField>
+        <ReportField Name="CashAccountID_Segment1"></ReportField>
+        <ReportField Name="CashDiscBal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CostCodeID"></ReportField>
+        <ReportField Name="CostCodeID_description"></ReportField>
+        <ReportField Name="CostCodeID_PMCostCode_description"></ReportField>
+        <ReportField Name="CostCodeID_Segment1"></ReportField>
+        <ReportField Name="CostCodeID_Segment2"></ReportField>
+        <ReportField Name="CreatedByID"></ReportField>
+        <ReportField Name="CreatedByID_Creator_displayName"></ReportField>
+        <ReportField Name="CreatedByID_Creator_Username"></ReportField>
+        <ReportField Name="CreatedByID_description"></ReportField>
+        <ReportField Name="CreatedByScreenID"></ReportField>
+        <ReportField Name="CreatedDateTime">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="CreatedDateTime_Day"></ReportField>
+        <ReportField Name="CreatedDateTime_Hour"></ReportField>
+        <ReportField Name="CreatedDateTime_Month"></ReportField>
+        <ReportField Name="CreatedDateTime_Quarter"></ReportField>
+        <ReportField Name="CuryCashDiscBal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryInfoID">
+          <DataType>Int64</DataType>
+        </ReportField>
+        <ReportField Name="CuryRate">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTaxableAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTaxAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTranAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryTranBal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryUnitPrice">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="CuryViewState">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="FinPeriodID"></ReportField>
+        <ReportField Name="InventoryID"></ReportField>
+        <ReportField Name="InventoryID_description"></ReportField>
+        <ReportField Name="InventoryID_InventoryItem_descr"></ReportField>
+        <ReportField Name="InventoryID_Segment1"></ReportField>
+        <ReportField Name="LastModifiedByID"></ReportField>
+        <ReportField Name="LastModifiedByID_description"></ReportField>
+        <ReportField Name="LastModifiedByID_Modifier_displayName"></ReportField>
+        <ReportField Name="LastModifiedByID_Modifier_Username"></ReportField>
+        <ReportField Name="LastModifiedByScreenID"></ReportField>
+        <ReportField Name="LastModifiedDateTime">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="LastModifiedDateTime_Day"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Hour"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Month"></ReportField>
+        <ReportField Name="LastModifiedDateTime_Quarter"></ReportField>
+        <ReportField Name="LineNbr">
+          <DataType>Int32</DataType>
+        </ReportField>
+        <ReportField Name="NonBillable">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="NoteActivity"></ReportField>
+        <ReportField Name="NoteFiles"></ReportField>
+        <ReportField Name="NoteID">
+          <DataType>Object</DataType>
+        </ReportField>
+        <ReportField Name="NoteImages"></ReportField>
+        <ReportField Name="NoteText"></ReportField>
+        <ReportField Name="ProjectID"></ReportField>
+        <ReportField Name="ProjectID_description"></ReportField>
+        <ReportField Name="ProjectID_PMProject_description"></ReportField>
+        <ReportField Name="ProjectID_Segment1"></ReportField>
+        <ReportField Name="Qty">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="ReclassificationProhibited">
+          <DataType>Boolean</DataType>
+        </ReportField>
+        <ReportField Name="RefNbr"></ReportField>
+        <ReportField Name="SubID"></ReportField>
+        <ReportField Name="SubID_description"></ReportField>
+        <ReportField Name="SubID_Segment1"></ReportField>
+        <ReportField Name="SubID_Segment2"></ReportField>
+        <ReportField Name="SubID_Sub_description"></ReportField>
+        <ReportField Name="TaskID"></ReportField>
+        <ReportField Name="TaskID_description"></ReportField>
+        <ReportField Name="TaskID_PMTask_description"></ReportField>
+        <ReportField Name="TaskID_Segment1"></ReportField>
+        <ReportField Name="TaxableAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TaxAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TaxCategoryID"></ReportField>
+        <ReportField Name="TaxCategoryID_description"></ReportField>
+        <ReportField Name="TaxCategoryID_TaxCategory_descr"></ReportField>
+        <ReportField Name="TranAmt">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TranBal">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="TranDate">
+          <DataType>DateTime</DataType>
+        </ReportField>
+        <ReportField Name="TranDesc"></ReportField>
+        <ReportField Name="TranPeriodID"></ReportField>
+        <ReportField Name="TranType"></ReportField>
+        <ReportField Name="tstamp"></ReportField>
+        <ReportField Name="UnitPrice">
+          <DataType>Decimal</DataType>
+        </ReportField>
+        <ReportField Name="UOM"></ReportField>
+      </Fields>
+      <FullName>PX.Objects.CA.CASplit</FullName>
+    </ReportTable>
+  </Tables>
+  <Sections>
+    <PageHeader Name="pageHeaderSection1">
+      <ExcelMargin>
+        <bottom>1</bottom>
+      </ExcelMargin>
+      <GridSize>8px, 8px</GridSize>
+      <Height>64px</Height>
+      <Items>
+        <TextBox Name="textBox11">
+          <Excel>
+            <column>5</column>
+          </Excel>
+          <Location>320px, 4px</Location>
+          <Size>80px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>Tran. Type:</Value>
+          <VisibleExpr>=([@BranchID]&lt;&gt;Null)</VisibleExpr>
+        </TextBox>
+        <TextBox Name="textBox14">
+          <Excel>
+            <column>9</column>
+            <row>2</row>
+          </Excel>
+          <Location>880px, 20px</Location>
+          <Size>36px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>Date:</Value>
+        </TextBox>
+        <TextBox Name="textBox15">
+          <Excel>
+            <column>9</column>
+          </Excel>
+          <ExcelVisible>False</ExcelVisible>
+          <Location>880px, 4px</Location>
+          <Size>36px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>Page:</Value>
+        </TextBox>
+        <TextBox Name="textBox16">
+          <Excel>
+            <column>9</column>
+            <row>3</row>
+          </Excel>
+          <Location>880px, 36px</Location>
+          <Size>36px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>User:</Value>
+        </TextBox>
+        <TextBox Name="textBox17">
+          <Excel>
+            <column>10</column>
+          </Excel>
+          <ExcelVisible>False</ExcelVisible>
+          <Location>920px, 4px</Location>
+          <Size>100px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Report Params</StyleName>
+          <Value>=[PageOf]</Value>
+        </TextBox>
+        <TextBox Name="textBox18">
+          <CanGrow>True</CanGrow>
+          <Excel>
+            <column>10</column>
+            <row>3</row>
+          </Excel>
+          <Location>920px, 36px</Location>
+          <Size>100px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Report Params</StyleName>
+          <Value>=Report.GetDefUI('AccessInfo.DisplayName')</Value>
+        </TextBox>
+        <TextBox Name="textBox19">
+          <Excel>
+            <column>10</column>
+            <row>2</row>
+          </Excel>
+          <Format>g</Format>
+          <Location>920px, 20px</Location>
+          <Size>100px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Report Params</StyleName>
+          <Value>=Now()</Value>
+        </TextBox>
+        <TextBox Name="textBox22">
+          <Excel>
+            <column>5</column>
+            <row>2</row>
+          </Excel>
+          <Location>320px, 20px</Location>
+          <Size>80px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>Reference Nbr.:</Value>
+          <VisibleExpr>=[@LedgerID]&lt;&gt;null</VisibleExpr>
+        </TextBox>
+        <TextBox Name="textBox63">
+          <Excel>
+            <column>3</column>
+            <row>2</row>
+          </Excel>
+          <Location>80px, 20px</Location>
+          <Size>168px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>=Report.GetDefUI('AccessInfo.CompanyName')</Value>
+        </TextBox>
+        <TextBox Name="textBox65">
+          <Excel>
+            <row>2</row>
+          </Excel>
+          <Location>4px, 20px</Location>
+          <Size>76px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>Company:</Value>
+        </TextBox>
+        <TextBox Name="textBox66">
+          <Excel>
+            <column>6</column>
+            <row>2</row>
+          </Excel>
+          <Location>400px, 20px</Location>
+          <Size>140px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>=[@RefNbr]</Value>
+        </TextBox>
+        <TextBox Name="textBox67">
+          <Excel>
+            <column>6</column>
+          </Excel>
+          <Location>400px, 4px</Location>
+          <Size>140px, 14px</Size>
+          <StyleName>Report Params</StyleName>
+          <Value>=First([CAAdj.OrigAdjTranType])</Value>
+        </TextBox>
+        <TextBox Name="textBox9">
+          <Location>4px, 0px</Location>
+          <Size>244px, 18px</Size>
+          <StyleName>Report Name</StyleName>
+          <Value>CA Reversing Transactions</Value>
+        </TextBox>
+      </Items>
+    </PageHeader>
+    <Detail Name="detailSection1">
+      <GridSize>8px, 8px</GridSize>
+      <Height>14px</Height>
+      <PrintEmpty>False</PrintEmpty>
+      <Items>
+        <TextBox Name="textBox30">
+          <Excel>
+            <column>8</column>
+          </Excel>
+          <Location>736px, 0px</Location>
+          <Size>56px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Normal</StyleName>
+          <Value>=[CAAdj.CuryID]</Value>
+        </TextBox>
+        <TextBox Name="textBox31">
+          <Excel>
+            <column>10</column>
+          </Excel>
+          <Format>=[CASplit.CuryTranAmt.Format]</Format>
+          <Location>904px, 0px</Location>
+          <Size>116px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.CuryTranAmt]</Value>
+        </TextBox>
+        <TextBox Name="textBox32">
+          <Excel>
+            <column>9</column>
+          </Excel>
+          <Format>=[CASplit.Qty.Format]</Format>
+          <Location>792px, 0px</Location>
+          <Size>112px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.Qty]</Value>
+        </TextBox>
+        <TextBox Name="textBox37">
+          <Excel>
+            <column>2</column>
+          </Excel>
+          <Location>112px, 0px</Location>
+          <Size>84px, 14px</Size>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.AccountID]</Value>
+        </TextBox>
+        <TextBox Name="textBox39">
+          <Excel>
+            <column>3</column>
+          </Excel>
+          <Location>196px, 0px</Location>
+          <Size>152px, 14px</Size>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.SubID]</Value>
+        </TextBox>
+        <TextBox Name="textBox41">
+          <Excel>
+            <column>5</column>
+          </Excel>
+          <Location>348px, 0px</Location>
+          <Size>104px, 14px</Size>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.ProjectID]</Value>
+        </TextBox>
+        <TextBox Name="textBox42">
+          <Excel>
+            <column>6</column>
+          </Excel>
+          <Location>452px, 0px</Location>
+          <Size>284px, 14px</Size>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.TranDesc]</Value>
+        </TextBox>
+        <TextBox Name="textBox59">
+          <Location>4px, 0px</Location>
+          <Size>108px, 14px</Size>
+          <StyleName>Normal</StyleName>
+          <Value>=[CASplit.BranchID]</Value>
+        </TextBox>
+      </Items>
+    </Detail>
+    <PageFooter Name="pageFooterSection1">
+      <GridSize>8px, 8px</GridSize>
+      <Height>7.99999px</Height>
+      <Visible>False</Visible>
+    </PageFooter>
+    <ReportFooter Name="reportFooterSection1">
+      <GridSize>8px, 8px</GridSize>
+      <Height>35.99996px</Height>
+      <Visible>False</Visible>
+    </ReportFooter>
+    <PageHeader Name="pageHeaderSection2">
+      <GridSize>8px, 8px</GridSize>
+      <Height>24px</Height>
+      <StyleName>ColumnsHeaderSection</StyleName>
+      <Items>
+        <TextBox Name="textBox29">
+          <Excel>
+            <column>7</column>
+          </Excel>
+          <Location>608px, 4px</Location>
+          <Size>116px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Created Time</Value>
+        </TextBox>
+        <TextBox Name="textBox4">
+          <Excel>
+            <column>4</column>
+          </Excel>
+          <Location>56px, 4px</Location>
+          <Size>60px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Tran. Date</Value>
+        </TextBox>
+        <TextBox Name="textBox40">
+          <Excel>
+            <column>3</column>
+          </Excel>
+          <Location>192px, 4px</Location>
+          <Size>84px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Ref. Nbr.</Value>
+        </TextBox>
+        <TextBox Name="textBox45">
+          <Excel>
+            <column>6</column>
+          </Excel>
+          <Location>360px, 4px</Location>
+          <Size>248px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Description</Value>
+        </TextBox>
+        <TextBox Name="textBox5">
+          <Location>4px, 4px</Location>
+          <Size>52px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Period</Value>
+        </TextBox>
+        <TextBox Name="textBox55">
+          <Excel>
+            <column>5</column>
+          </Excel>
+          <Location>276px, 4px</Location>
+          <Size>84px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Status</Value>
+        </TextBox>
+        <TextBox Name="textBox56">
+          <Excel>
+            <column>8</column>
+          </Excel>
+          <Location>724px, 4px</Location>
+          <Size>88px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Created By</Value>
+        </TextBox>
+        <TextBox Name="textBox57">
+          <Excel>
+            <column>10</column>
+          </Excel>
+          <Location>904px, 4px</Location>
+          <Size>116px, 14px</Size>
+          <Style>
+            <TextAlign>Right</TextAlign>
+          </Style>
+          <StyleName>Heading 1</StyleName>
+          <Value>Amount</Value>
+        </TextBox>
+        <TextBox Name="textBox6">
+          <Excel>
+            <column>9</column>
+          </Excel>
+          <Location>812px, 4px</Location>
+          <Size>92px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Last Modified By</Value>
+        </TextBox>
+        <TextBox Name="textBox7">
+          <Excel>
+            <column>2</column>
+          </Excel>
+          <Location>116px, 4px</Location>
+          <Size>76px, 14px</Size>
+          <StyleName>Heading 1</StyleName>
+          <Value>Tran. Type</Value>
+        </TextBox>
+      </Items>
+    </PageHeader>
+  </Sections>
+  <Items />
+  <Groups>
+    <Group Name="group1">
+      <Grouping>
+        <GroupExp>
+          <DataField>CAAdj.AdjTranType</DataField>
+        </GroupExp>
+        <GroupExp>
+          <DataField>CAAdj.AdjRefNbr</DataField>
+        </GroupExp>
+      </Grouping>
+      <KeepTogether>FirstDetail</KeepTogether>
+      <Headers>
+        <Header Name="groupHeaderSection1">
+          <GridSize>8px, 8px</GridSize>
+          <Height>24px</Height>
+          <PrintEmpty>False</PrintEmpty>
+          <StyleName>GroupHighlight</StyleName>
+          <Items>
+            <TextBox Name="textBox33">
+              <Excel>
+                <column>7</column>
+              </Excel>
+              <Location>608px, 4px</Location>
+              <Size>116px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.CreatedDateTime]</Value>
+            </TextBox>
+            <TextBox Name="textBox54">
+              <Excel>
+                <column>4</column>
+              </Excel>
+              <Location>192px, 4px</Location>
+              <NavigateMethod>Server</NavigateMethod>
+              <Size>84px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.AdjRefNbr]</Value>
+            </TextBox>
+            <TextBox Name="textBox58">
+              <Location>4px, 4px</Location>
+              <Size>52px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.TranPeriodID]</Value>
+            </TextBox>
+            <TextBox Name="textBox60">
+              <Excel>
+                <column>3</column>
+              </Excel>
+              <Location>116px, 4px</Location>
+              <Size>76px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.AdjTranType]</Value>
+            </TextBox>
+            <TextBox Name="textBox61">
+              <Excel>
+                <column>10</column>
+              </Excel>
+              <Format>=[CAAdj.CuryTranAmt.Format]</Format>
+              <Location>904px, 4px</Location>
+              <Size>116px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+                <TextAlign>Right</TextAlign>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.CuryTranAmt]</Value>
+            </TextBox>
+            <TextBox Name="textBox62">
+              <Excel>
+                <column>6</column>
+              </Excel>
+              <Location>360px, 4px</Location>
+              <Size>248px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.TranDesc]</Value>
+            </TextBox>
+            <TextBox Name="textBox64">
+              <Excel>
+                <column>5</column>
+              </Excel>
+              <Location>276px, 4px</Location>
+              <Size>84px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.Status]</Value>
+            </TextBox>
+            <TextBox Name="textBox68">
+              <Excel>
+                <column>2</column>
+              </Excel>
+              <Location>56px, 4px</Location>
+              <Size>60px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.TranDate]</Value>
+            </TextBox>
+            <TextBox Name="textBox69">
+              <Excel>
+                <column>8</column>
+              </Excel>
+              <Location>724px, 4px</Location>
+              <Size>88px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.CreatedByID]</Value>
+            </TextBox>
+            <TextBox Name="textBox70">
+              <Excel>
+                <column>9</column>
+              </Excel>
+              <Location>812px, 4px</Location>
+              <Size>92px, 14px</Size>
+              <Style>
+                <Font>
+                  <Style>Bold</Style>
+                </Font>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>=[CAAdj.LastModifiedByID]</Value>
+            </TextBox>
+          </Items>
+        </Header>
+        <Header Name="groupHeaderSection2">
+          <GridSize>8px, 8px</GridSize>
+          <Height>20px</Height>
+          <StyleName>GroupL1Highlight</StyleName>
+          <Items>
+            <TextBox Name="textBox23">
+              <Excel>
+                <column>3</column>
+              </Excel>
+              <Location>196px, 4px</Location>
+              <Size>152px, 14px</Size>
+              <StyleName>Heading 1</StyleName>
+              <Value>Subaccount</Value>
+            </TextBox>
+            <TextBox Name="textBox24">
+              <Excel>
+                <column>5</column>
+              </Excel>
+              <Location>348px, 4px</Location>
+              <Size>104px, 14px</Size>
+              <StyleName>Heading 1</StyleName>
+              <Value>Project</Value>
+            </TextBox>
+            <TextBox Name="textBox25">
+              <Excel>
+                <column>9</column>
+              </Excel>
+              <Location>792px, 4px</Location>
+              <Size>112px, 14px</Size>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>Quantity</Value>
+            </TextBox>
+            <TextBox Name="textBox26">
+              <Excel>
+                <column>10</column>
+              </Excel>
+              <Location>904px, 4px</Location>
+              <Size>116px, 14px</Size>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>Amount</Value>
+            </TextBox>
+            <TextBox Name="textBox27">
+              <Location>4px, 4px</Location>
+              <Size>108px, 14px</Size>
+              <StyleName>Heading 1</StyleName>
+              <Value>Branch</Value>
+            </TextBox>
+            <TextBox Name="textBox28">
+              <Excel>
+                <column>2</column>
+              </Excel>
+              <Location>112px, 4px</Location>
+              <Size>84px, 14px</Size>
+              <StyleName>Heading 1</StyleName>
+              <Value>Account</Value>
+            </TextBox>
+            <TextBox Name="textBox34">
+              <Excel>
+                <column>8</column>
+              </Excel>
+              <Location>736px, 4px</Location>
+              <Size>56px, 14px</Size>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+              <StyleName>Heading 1</StyleName>
+              <Value>Currency</Value>
+            </TextBox>
+            <TextBox Name="textBox8">
+              <Excel>
+                <column>6</column>
+              </Excel>
+              <Location>452px, 4px</Location>
+              <Size>284px, 14px</Size>
+              <StyleName>Heading 1</StyleName>
+              <Value>Description</Value>
+            </TextBox>
+          </Items>
+        </Header>
+      </Headers>
+      <Footers>
+        <Footer Name="groupFooterSection1">
+          <GridSize>8px, 8px</GridSize>
+          <Height>20px</Height>
+        </Footer>
+      </Footers>
+    </Group>
+  </Groups>
+</Report>

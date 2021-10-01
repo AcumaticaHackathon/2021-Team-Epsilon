@@ -1,0 +1,43 @@
+﻿<textarea id="bodyTemplate-appointment" class="x-hidden-display" > 
+    <div style="text-align: center;" style="font-weight: normal">
+        <tpl if="WarningCounter&amp;gt;0">
+            <div class="x-fa fa-exclamation-triangle" style="float: left;" data-qtip="
+            <tpl if="WarningResourceAvailableFlag">
+                - {Messages.WARNING_RESOURCE_AVAILABLE} <br>
+            </tpl>
+            <tpl if="WarningAppointmentValidFlag">
+                - {Messages.WARNING_APPOINTMENT_OVERLAPPING} <br>
+            </tpl>
+            <tpl if="WarningAppointmentValidatedByDispatcherFlag">
+                - {Messages.WARNING_APPOINTMENT_VALIDATED_BY_DISPATCHER} <br>
+            </tpl>
+            "></div>
+        </tpl>
+        
+        <tpl if="Appointment.EmployeeCount&amp;gt;1">
+            <div class="x-fa fa-users" style="float: left;" data-qtip = "{TotalEmployeesMessage}"></div>
+        </tpl>
+
+        <tpl if="Appointment.CanDeleteAppointment && !Ext.isEmpty(StatusName) && StatusName!='Closed' && StatusName!='Canceled' && StatusName!='Completed'">
+            <div class="x-fa fa-trash" style="float: right;"></div>
+        </tpl>
+
+        <span id="appointmentRefNbr" class="sch-event-header link-appointment" >
+            {Appointment.RefNbr}
+        </span>
+    </div>
+    
+    <tpl for="ComponentFields">
+
+        <!-- Each custom field to be shown in the box -->
+        <tpl if="value!='' && value!=null">
+            <div style="<tpl if="parent.ViewMode=='horizontal'">display:inline-block;</tpl>">
+                <div class="sch-event-footer" style="float: left; padding-top: 2px; width: <tpl if="parent.ViewMode=='horizontal'">13<tpl else>18</tpl>px;" data-qtip="{label}">
+                    {icon}
+                </div>
+                <span>{value:ellipsis(25, true)}</span>
+            </div>
+        </tpl>
+        
+    </tpl>  
+</textarea>

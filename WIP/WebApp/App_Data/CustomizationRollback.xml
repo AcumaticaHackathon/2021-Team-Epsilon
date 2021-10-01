@@ -1,0 +1,7 @@
+<Rollback>
+  <File path="Bin\AH.Objects.dll" method="Delete" />
+  <File path="Pages\AH\AH300010.aspx" method="Delete" />
+  <File path="Pages\AH\AH300010.aspx.cs" method="Delete" />
+  <File path="Pages\AH\AH400010.aspx" method="Delete" />
+  <File path="Pages\AH\AH400010.aspx.cs" method="Delete" />
+</Rollback>

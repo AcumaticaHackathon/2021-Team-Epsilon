@@ -1,0 +1,8 @@
+S:\Sites9\Hack21\WebApp\bin\AH.Objects.dll.config
+S:\Sites9\Hack21\WebApp\bin\AH.Objects.dll
+S:\Sites9\Hack21\WebApp\bin\AH.Objects.pdb
+S:\Sites9\Hack21\AH.Objects\obj\Debug\AH.Objects.csproj.AssemblyReference.cache
+S:\Sites9\Hack21\AH.Objects\obj\Debug\AH.Objects.csproj.CoreCompileInputs.cache
+S:\Sites9\Hack21\AH.Objects\obj\Debug\AH.Objects.csproj.CopyComplete
+S:\Sites9\Hack21\AH.Objects\obj\Debug\AH.Objects.dll
+S:\Sites9\Hack21\AH.Objects\obj\Debug\AH.Objects.pdb
